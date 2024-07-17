@@ -1,0 +1,7 @@
+http:
+  addr: 0.0.0.0:3123
+  tls_crt: ""
+  tls_key: ""
+  token: "60A&!SS4mQ$a$keA$@27nHV@L0!$20p4#r@!hr!16cY@HO$FDO3z^mwxu^iUcrdK"
+account:
+  admin: "@password"

@@ -1,0 +1,15 @@
+[Unit]
+Description=Service Manager
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+RootDirectory=/
+WorkingDirectory=/your/path/to/
+ExecStart=/your/path/to/service-man.bin
+Restart=on-failure
+RestartSec=3s
+
+[Install]
+WantedBy=multi-user.target

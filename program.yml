@@ -1,0 +1,74 @@
+certificate:
+  description: "证书服务"
+  config:
+#    1111: D:\Home\Default\Documents\1111.txt
+  operation:
+    start: systemctl start aaa.service
+    stop: systemctl stop aaa.service
+    restart: systemctl restart aaa.service
+    status: ipconfig
+service-manager:
+  description: 服务管理
+  config:
+    program.yml: /opt/service-manager/program.yml
+certificate-server:
+  description: "证书服务"
+  config:
+  operation:
+    start: systemctl start certs.service
+    stop: systemctl stop certs.service
+    restart: systemctl restart certs.service
+    status: systemctl status certs.service
+certificate-client:
+  description: "证书服务"
+  config:
+    certc.service: /etc/systemd/system/certc.service
+  operation:
+    start: systemctl start certc.service
+    stop: systemctl stop certc.service
+    restart: systemctl restart certc.service
+    status: systemctl status certc.service
+dcm:
+  description: 数据服务
+  config:
+    config: /opt/dcm/config/config.yaml
+  operation:
+    start: systemctl start dcm.service
+    stop: systemctl stop dcm.service
+    restart: systemctl restart dcm.service
+    status: systemctl status dcm.service
+nginx:
+  description: 网页服务
+  config:
+  operation:
+    start: systemctl start nginx.service
+    stop: systemctl stop nginx.service
+    restart: systemctl restart nginx.service
+    status: systemctl status nginx.service
+rtc:
+  description: 通信服务
+  config:
+    config.js: /opt/rtc-server/config/config.js
+  operation:
+    start: systemctl start rtcs.service
+    stop: systemctl stop rtcs.service
+    restart: systemctl restart rtcs.service
+    status: systemctl status rtcs.service
+sc:
+  description: 流媒体级联服务
+  config:
+    config: /opt/streaming-cascade/config.yml
+  operation:
+    start: systemctl start sc.service
+    stop: systemctl stop sc.service
+    restart: systemctl restart sc.service
+    status: systemctl status sc.service
+media-kit:
+  description: 流媒体服务
+  config:
+    config.ini: /opt/zlmediakit/config.ini
+  operation:
+    start: systemctl start zlmediakit.service
+    stop: systemctl stop zlmediakit.service
+    restart: systemctl restart zlmediakit.service
+    status: systemctl status zlmediakit.service
